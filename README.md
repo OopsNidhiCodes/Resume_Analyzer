@@ -59,9 +59,7 @@ Resume_Analyzer/
 - Reports are saved in the `results/` folder and can be downloaded as PDF or JSON.
 
 ##📸 Demo Screenshot
-
-
-
+/static/demo.png
 
 ## License
 MIT License
