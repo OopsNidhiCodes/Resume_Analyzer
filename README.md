@@ -27,7 +27,7 @@ Resume Analyzer is a web application that analyzes resumes (PDF/DOCX) for ATS (A
    python -m spacy download en_core_web_md
    ```
 
-## Usage
+## Local Development
 1. **Start the Flask server:**
    ```bash
    python -m flask run
@@ -37,6 +37,30 @@ Resume Analyzer is a web application that analyzes resumes (PDF/DOCX) for ATS (A
 3. **Upload a resume and (optionally) a job description.**
 4. **View analysis results and download the PDF report.**
 
+## Deployment Options
+
+### 1. Docker Deployment (Recommended)
+1. **Using Docker Compose (Easiest):**
+   ```bash
+   docker-compose up -d
+   ```
+   This will build and start the application with all necessary configurations.
+
+2. **Using Docker directly:**
+   ```bash
+   docker build -t resume-analyzer .
+   docker run -p 5000:5000 resume-analyzer
+   ```
+
+### 2. Cloud Platform Deployment
+
+Detailed deployment guides for various platforms are available in the `docs/deployment.md` file, including:
+- Heroku deployment
+- Railway/Render deployment
+- Production considerations
+- Environment configuration
+- Maintenance guidelines
+
 ## Project Structure
 ```
 Resume_Analyzer/
@@ -44,6 +68,10 @@ Resume_Analyzer/
 │   └── resume_analyzer.py      # Resume analysis logic
 ├── app.py                     # Flask web server
 ├── requirements.txt           # Python dependencies
+├── Dockerfile                 # Docker configuration
+├── docker-compose.yml         # Docker Compose configuration
+├── docs/
+│   └── deployment.md          # Deployment documentation
 ├── results/                   # Stores analysis result JSON files
 ├── static/
 │   ├── css/style.css          # Styles
@@ -52,6 +80,13 @@ Resume_Analyzer/
 │   └── index.html             # Main HTML page
 ├── uploads/                   # Uploaded resumes
 ```
+
+## Production Considerations
+- Set appropriate environment variables (FLASK_ENV, SECRET_KEY)
+- Configure HTTPS and secure headers
+- Implement proper file storage solution
+- Set up monitoring and logging
+- Regular backups and maintenance
 
 ## Notes
 - For image-based PDFs, text extraction may be limited. Consider using OCR tools for better results.
