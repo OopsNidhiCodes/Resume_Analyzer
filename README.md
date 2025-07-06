@@ -3,12 +3,12 @@
 Resume Analyzer is a web application that analyzes resumes (PDF/DOCX) for ATS (Applicant Tracking System) compatibility, section completeness, skill coverage, and formatting. It provides actionable suggestions and generates downloadable PDF reports.
 
 ## Features
-- Upload resumes in PDF or DOCX format
-- Extracts and parses resume sections (Contact Info, Skills, Experience, Education, etc.)
-- Calculates ATS score and category-wise breakdown (content, format, skills, sections, style)
-- Provides suggestions for improvement
-- Supports job description matching for skill relevance
-- Downloadable PDF and JSON analysis reports
+- 📄 Upload resumes (PDF/DOCX)
+- 🔍 Extract key sections: Contact Info, Skills, Experience, Education
+- 🧠 GPT-generated suggestions for improvement
+- 📊 ATS scoring (formatting, content, skills, style)
+- 🤖 Optional job description matching
+- 📥 Download AI-generated PDF/JSON reports
 
 ## Installation
 1. **Clone the repository:**
@@ -92,6 +92,10 @@ Resume_Analyzer/
 - For image-based PDFs, text extraction may be limited. Consider using OCR tools for better results.
 - The skills section detection and scoring logic is customizable in `analyzer/resume_analyzer.py`.
 - Reports are saved in the `results/` folder and can be downloaded as PDF or JSON.
+
+##📸 Demo Screenshot
+![image](https://github.com/user-attachments/assets/9d7858aa-c1e0-4385-a9c5-b535cc1d61e4)
+
 
 ## License
 MIT License
