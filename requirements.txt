@@ -19,18 +19,18 @@ numpy==1.25.2
 pandas==2.1.0
 scikit-learn==1.3.0
 
+# PDF/Report Generation
+reportlab==4.0.4
+xhtml2pdf==0.2.13
+WeasyPrint==60.1
+
 # OCR
 pytesseract==0.3.10
-
-# PDF Generation
-reportlab==4.0.4
-xhtml2pdf==0.2.11
-WeasyPrint==60.1
 
 # HTTP
 requests==2.31.0
 
-# System Dependencies (for WeasyPrint)
-pango-1.0
-cairo
-gobject-2.0
+# Remove invalid or system packages
+# pango-1.0 (invalid, removed)
+# cairo (system package, remove)
+# gobject-2.0 (system package, remove)
