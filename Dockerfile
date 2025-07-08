@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
     pkg-config \
+    libcairo2-dev \
     libpango-1.0-0 \
     libharfbuzz0b \
     libpangoft2-1.0-0 \
