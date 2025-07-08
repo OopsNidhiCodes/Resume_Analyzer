@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: resume-analyzer
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app --workers 4 --timeout 120"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    autoDeploy: true
