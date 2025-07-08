@@ -6,6 +6,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
+    pkg-config \
     libpango-1.0-0 \
     libharfbuzz0b \
     libpangoft2-1.0-0 \
